@@ -2,7 +2,7 @@ package dhbw.refactor;
 
 public class Movie {
 
-    private String title;
+    private final String title;
     private PriceCode priceCode;
     public Movie(String title, PriceCode priceCode) {
         this.title = title;
