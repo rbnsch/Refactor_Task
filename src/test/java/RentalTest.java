@@ -1,4 +1,5 @@
 import dhbw.refactor.Movie;
+import dhbw.refactor.PriceCode;
 import dhbw.refactor.Rental;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,7 +12,7 @@ public class RentalTest {
 
     @BeforeEach
     void setUp() {
-        Movie m = new Movie("Titel", 10);
+        Movie m = new Movie("Titel", PriceCode.CHILDRENS);
         this.r = new Rental(m, 10);
     }
 

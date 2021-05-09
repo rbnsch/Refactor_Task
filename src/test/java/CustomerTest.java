@@ -1,5 +1,6 @@
 import dhbw.refactor.Customer;
 import dhbw.refactor.Movie;
+import dhbw.refactor.PriceCode;
 import dhbw.refactor.Rental;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,7 +24,7 @@ public class CustomerTest {
 
     @Test
     void addRental() {
-        Movie m = new Movie("Title", 10);
+        Movie m = new Movie("Title", PriceCode.CHILDRENS);
         Rental r = new Rental(m, 10);
         this.c.addRental(r);
         //tbd
@@ -32,11 +33,11 @@ public class CustomerTest {
 
     @Test
     void statement() {
-        Movie m = new Movie("Title", 10);
+        Movie m = new Movie("Title", PriceCode.CHILDRENS);
         Rental r = new Rental(m, 10);
         this.c.addRental(r);
         System.out.println(c.statement());
-        String expected = "Rental Record for Test\n" + "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n" + "\t" + "Title" + "\t" + "\t" + "10" + "\t" + "0.0" + "\n" +"Amount owed is 0.0\n" + "You earned 1 frequent renter points";
+        String expected = "Rental Record for Test\n" + "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n" + "\t" + "Title" + "\t" + "\t" + "10" + "\t" + "12.0" + "\n" +"Amount owed is 12.0\n" + "You earned 1 frequent renter points";
         assertEquals(expected, c.statement());
     }
 }

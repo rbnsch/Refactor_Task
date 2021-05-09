@@ -19,8 +19,8 @@ public class Program
     {
         String result;
         System.out.println("Welcome to the Movie Store");
-        Movie m1 = new Movie("movie1", 1);
-        Movie m2 = new Movie("movie2", 2);
+        Movie m1 = new Movie("movie1", PriceCode.CHILDRENS);
+        Movie m2 = new Movie("movie2", PriceCode.NEW_RELEASE);
         Rental r1 = new Rental(m1, 10);
         Rental r2 = new Rental(m2, 5);
         Customer c1 = new Customer("joe");

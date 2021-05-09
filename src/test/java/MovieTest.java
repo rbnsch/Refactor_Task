@@ -1,4 +1,5 @@
 import dhbw.refactor.Movie;
+import dhbw.refactor.PriceCode;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,12 +11,12 @@ public class MovieTest {
 
     @BeforeEach
     void setUp() {
-        this.m = new Movie("Titel", 10);
+        this.m = new Movie("Titel", PriceCode.CHILDRENS);
     }
 
     @Test
     void getPriceCode() {
-        assertEquals(10, m.getPriceCode());
+        assertEquals(PriceCode.CHILDRENS, m.getPriceCode());
     }
 
     @Test
@@ -25,7 +26,7 @@ public class MovieTest {
 
     @Test
     void setPriceCode() {
-        this.m.setPriceCode(42);
-        assertEquals(42, m.getPriceCode());
+        this.m.setPriceCode(PriceCode.REGULAR);
+        assertEquals(PriceCode.REGULAR, m.getPriceCode());
     }
 }
