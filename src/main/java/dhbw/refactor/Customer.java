@@ -35,9 +35,9 @@ public class Customer {
 
     private double getTotalCharge() {
         double charge = 0;
-        Enumeration<Rental> enum_rentals = this.rentals.elements();
-        while (enum_rentals.hasMoreElements()) {
-            Rental rental = (Rental) enum_rentals.nextElement();
+        Enumeration<Rental> rentals = this.rentals.elements();
+        while (rentals.hasMoreElements()) {
+            Rental rental = (Rental) rentals.nextElement();
             charge += rental.getCharge();
         }
         return charge;
@@ -45,9 +45,9 @@ public class Customer {
 
     private int getTotalFrequentRenterPoints() {
         int points = 0;
-        Enumeration<Rental> enum_rentals = this.rentals.elements();
-        while (enum_rentals.hasMoreElements()) {
-            Rental rental = (Rental) enum_rentals.nextElement();
+        Enumeration<Rental> rentals = this.rentals.elements();
+        while (rentals.hasMoreElements()) {
+            Rental rental = (Rental) rentals.nextElement();
             points += rental.getFrequentRenterPoints();
         }
         return points;
