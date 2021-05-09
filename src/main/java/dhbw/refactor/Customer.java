@@ -57,6 +57,7 @@ public class Customer {
                 if (each.getDaysRented() > 3)
                     thisAmount += (each.getDaysRented() - 3) * 1.5;
             }
+            default -> System.out.println("Error!");
 
         }
         return thisAmount;
