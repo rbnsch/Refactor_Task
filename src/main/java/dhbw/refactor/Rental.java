@@ -1,5 +1,7 @@
 package dhbw.refactor;
 
+import static dhbw.refactor.PriceCode.NEW_RELEASE;
+
 public class Rental {
     private final Movie movie;
     private final int daysRented;
@@ -32,6 +34,13 @@ public class Rental {
 
         }
         return result;
+    }
+
+    public int getFrequentRenterPoints() {
+        if ((getMovie().getPriceCode() == NEW_RELEASE) && getDaysRented() > 1) {
+            return 2;
+        }
+        return 1;
     }
 
 }
