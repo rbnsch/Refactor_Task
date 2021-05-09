@@ -4,8 +4,8 @@ public class Movie {
 
     private String title;
     private PriceCode priceCode;
-    public Movie(String newtitle, PriceCode priceCode) {
-        title = newtitle;
+    public Movie(String title, PriceCode priceCode) {
+        this.title = title;
         this.priceCode = priceCode;
     }
     public PriceCode getPriceCode() {
