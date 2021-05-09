@@ -11,12 +11,12 @@ public class MovieTest {
 
     @BeforeEach
     void setUp() {
-        this.m = new Movie("Titel", PriceCode.CHILDRENS);
+        this.m = new Movie("Titel", PriceCode.CHILDREN);
     }
 
     @Test
     void getPriceCode() {
-        assertEquals(PriceCode.CHILDRENS, m.getPriceCode());
+        assertEquals(PriceCode.CHILDREN, m.getPriceCode());
     }
 
     @Test

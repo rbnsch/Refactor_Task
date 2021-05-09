@@ -24,7 +24,7 @@ public class CustomerTest {
 
     @Test
     void addRental() {
-        Movie m = new Movie("Title", PriceCode.CHILDRENS);
+        Movie m = new Movie("Title", PriceCode.CHILDREN);
         Rental r = new Rental(m, 10);
         this.c.addRental(r);
         //tbd
@@ -33,7 +33,7 @@ public class CustomerTest {
 
     @Test
     void statement() {
-        Movie m = new Movie("Title", PriceCode.CHILDRENS);
+        Movie m = new Movie("Title", PriceCode.CHILDREN);
         Rental r = new Rental(m, 10);
         this.c.addRental(r);
         System.out.println(c.statement());

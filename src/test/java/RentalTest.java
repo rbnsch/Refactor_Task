@@ -12,7 +12,7 @@ public class RentalTest {
 
     @BeforeEach
     void setUp() {
-        Movie m = new Movie("Titel", PriceCode.CHILDRENS);
+        Movie m = new Movie("Titel", PriceCode.CHILDREN);
         this.r = new Rental(m, 10);
     }
 
@@ -24,6 +24,6 @@ public class RentalTest {
     @Test
     void getMovie() {
         assertEquals("Titel", r.getMovie().getTitle());
-        assertEquals(10, r.getMovie().getPriceCode());
+        assertEquals(PriceCode.CHILDREN, r.getMovie().getPriceCode());
     }
 }
