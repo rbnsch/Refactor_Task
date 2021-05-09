@@ -1,3 +1,5 @@
+package dhbw.refactor;
+
 class Rental {
     private Movie movie;
     private int daysRented;
