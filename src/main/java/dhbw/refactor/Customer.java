@@ -18,7 +18,7 @@ public class Customer {
     };
     public String statement() {
 
-        Enumeration enum_rentals = rentals.elements();
+        Enumeration<Rental> enum_rentals = rentals.elements();
         StringBuilder result = new StringBuilder("Rental Record for " + this.getName() + "\n");
         result.append("\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n");
 
@@ -35,9 +35,9 @@ public class Customer {
 
     private double getTotalCharge() {
         double charge = 0;
-        Enumeration enumeration = rentals.elements();
-        while (enumeration.hasMoreElements()) {
-            Rental rental = (Rental) enumeration.nextElement();
+        Enumeration<Rental> enum_rentals = this.rentals.elements();
+        while (enum_rentals.hasMoreElements()) {
+            Rental rental = (Rental) enum_rentals.nextElement();
             charge += rental.getCharge();
         }
         return charge;
@@ -45,9 +45,9 @@ public class Customer {
 
     private int getTotalFrequentRenterPoints() {
         int points = 0;
-        Enumeration enumeration = rentals.elements();
-        while (enumeration.hasMoreElements()) {
-            Rental rental = (Rental) enumeration.nextElement();
+        Enumeration<Rental> enum_rentals = this.rentals.elements();
+        while (enum_rentals.hasMoreElements()) {
+            Rental rental = (Rental) enum_rentals.nextElement();
             points += rental.getFrequentRenterPoints();
         }
         return points;
