@@ -9,13 +9,13 @@ public class Customer {
     private final Vector<Rental> rentals = new Vector<>();
     public Customer (String name){
         this.name = name;
-    };
+    }
     public void addRental(Rental rental) {
         rentals.addElement(rental);
-    };
+    }
     public String getName (){
         return name;
-    };
+    }
     public String statement() {
 
         Enumeration<Rental> enum_rentals = rentals.elements();

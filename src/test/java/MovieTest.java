@@ -24,9 +24,5 @@ public class MovieTest {
         assertEquals("Titel", m.getTitle());
     }
 
-    @Test
-    void setPriceCode() {
-        this.m.setPriceCode(PriceCode.REGULAR);
-        assertEquals(PriceCode.REGULAR, m.getPriceCode());
-    }
+
 }
