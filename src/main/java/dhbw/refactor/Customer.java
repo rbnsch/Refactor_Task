@@ -6,12 +6,12 @@ import java.util.*;
 
 public class Customer {
     private final String name;
-    private final Vector rentals = new Vector();
-    public Customer (String newname){
-        name = newname;
+    private final Vector<Rental> rentals = new Vector<>();
+    public Customer (String name){
+        this.name = name;
     };
-    public void addRental(Rental arg) {
-        rentals.addElement(arg);
+    public void addRental(Rental rental) {
+        rentals.addElement(rental);
     };
     public String getName (){
         return name;
